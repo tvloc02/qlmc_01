@@ -115,27 +115,24 @@ export default function EvidenceLookupPage() {
 
             const mockOptions = {
                 programs: [
-                    { id: '1', name: 'AUN-QA 2023', code: 'AUN23' },
-                    { id: '2', name: 'MOET 2024', code: 'MOET24' }
+                    { id: '', name: '', code: '' }
                 ],
                 organizations: [
-                    { id: '1', name: 'Đại học Nông nghiệp Hà Nội', code: 'VNUA' }
+                    { id: '', name: '', code: '' }
                 ],
                 standards: [
-                    { id: '1', name: 'Chất lượng sinh viên đầu vào', code: 'H1' },
-                    { id: '2', name: 'Chất lượng giảng viên', code: 'H2' }
+                    { id: '', name: '', code: '' }
                 ],
                 criteria: [
-                    { id: '1', name: 'Kết quả học tập', code: '01' },
-                    { id: '2', name: 'Hoạt động ngoại khóa', code: '02' }
+                    { id: '', name: '', code: '' }
                 ],
                 documentTypes: [
                     'Quyết định', 'Báo cáo', 'Kế hoạch', 'Thông báo', 'Biên bản'
                 ],
                 tags: [
-                    { name: 'Quan trọng', count: 45 },
-                    { name: 'Khẩn cấp', count: 23 },
-                    { name: 'Đã duyệt', count: 156 }
+                    { name: 'Quan trọng', count: 0 },
+                    { name: 'Khẩn cấp', count: 0 },
+                    { name: 'Đã duyệt', count: 0 }
                 ]
             }
 
@@ -185,55 +182,21 @@ export default function EvidenceLookupPage() {
 
             const mockResults = [
                 {
-                    id: '1',
-                    code: 'H1.01.02.15',
-                    name: 'Báo cáo kết quả học tập sinh viên K65',
-                    description: 'Báo cáo tổng hợp kết quả học tập của sinh viên khóa 65 trong năm học 2023-2024',
-                    standardName: 'Chất lượng sinh viên đầu vào',
-                    criteriaName: 'Kết quả học tập',
-                    documentType: 'Báo cáo',
-                    issueDate: '2024-12-20T00:00:00Z',
-                    issuingAgency: 'Phòng Đào tạo',
-                    tags: ['Quan trọng', 'Đã duyệt'],
-                    fileCount: 3,
-                    downloadCount: 25,
-                    createdBy: 'Nguyễn Văn A',
-                    createdAt: '2024-12-25T10:30:00Z',
+                    id: '',
+                    code: '',
+                    name: '',
+                    description: '',
+                    standardName: '',
+                    criteriaName: '',
+                    documentType: '',
+                    issueDate: '',
+                    issuingAgency: '',
+                    tags: ['', ''],
+                    fileCount: 0,
+                    downloadCount: 0,
+                    createdBy: '',
+                    createdAt: '',
                     highlights: ['<mark>báo cáo</mark> kết quả <mark>học tập</mark>']
-                },
-                {
-                    id: '2',
-                    code: 'H1.01.02.16',
-                    name: 'Danh sách sinh viên tốt nghiệp loại xuất sắc',
-                    description: 'Danh sách chi tiết sinh viên tốt nghiệp loại xuất sắc năm 2024',
-                    standardName: 'Chất lượng sinh viên đầu vào',
-                    criteriaName: 'Kết quả học tập',
-                    documentType: 'Danh sách',
-                    issueDate: '2024-12-15T00:00:00Z',
-                    issuingAgency: 'Phòng Đào tạo',
-                    tags: ['Xuất sắc'],
-                    fileCount: 1,
-                    downloadCount: 18,
-                    createdBy: 'Trần Thị B',
-                    createdAt: '2024-12-24T09:15:00Z',
-                    highlights: ['danh sách sinh viên']
-                },
-                {
-                    id: '3',
-                    code: 'H2.01.01.08',
-                    name: 'Quyết định bổ nhiệm giảng viên',
-                    description: 'Quyết định bổ nhiệm giảng viên chính thức năm 2024',
-                    standardName: 'Chất lượng giảng viên',
-                    criteriaName: 'Tuyển dụng và bổ nhiệm',
-                    documentType: 'Quyết định',
-                    issueDate: '2024-11-30T00:00:00Z',
-                    issuingAgency: 'Ban Giám hiệu',
-                    tags: ['Nhân sự'],
-                    fileCount: 2,
-                    downloadCount: 12,
-                    createdBy: 'Lê Văn C',
-                    createdAt: '2024-12-01T14:20:00Z',
-                    highlights: ['<mark>quyết định</mark> bổ nhiệm']
                 }
             ]
 
@@ -241,7 +204,6 @@ export default function EvidenceLookupPage() {
             setTotalItems(mockResults.length)
             setTotalPages(Math.ceil(mockResults.length / itemsPerPage))
 
-            // Add to search history
             if (searchQuery && !searchHistory.some(h => h.keyword === searchQuery)) {
                 setSearchHistory(prev => [{ keyword: searchQuery, timestamp: new Date() }, ...prev.slice(0, 4)])
             }
@@ -308,13 +270,10 @@ export default function EvidenceLookupPage() {
                 ...evidence,
                 fullDescription: evidence.description + ' - Chi tiết đầy đủ về minh chứng này...',
                 files: [
-                    { id: '1', name: 'bao-cao-chinh.pdf', size: 2048000, downloadCount: 15 },
-                    { id: '2', name: 'phu-luc-so-lieu.xlsx', size: 1024000, downloadCount: 8 },
-                    { id: '3', name: 'hinh-anh-minh-hoa.jpg', size: 512000, downloadCount: 3 }
+                    { id: '', name: '', size: 0, downloadCount: 0 }
                 ],
                 relatedEvidences: [
-                    { id: '4', name: 'Báo cáo liên quan 1', code: 'H1.01.02.14' },
-                    { id: '5', name: 'Báo cáo liên quan 2', code: 'H1.01.02.17' }
+                    { id: '', name: '', code: '' }
                 ]
             }
 
