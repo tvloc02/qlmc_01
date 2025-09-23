@@ -120,20 +120,6 @@ export default function EvidenceWorkflowPage() {
         try {
             await new Promise(resolve => setTimeout(resolve, 300))
 
-            const mockConfigs = [
-                {
-                    id: '1',
-                    name: 'Chữ ký điện tử Trưởng phòng',
-                    signerName: 'Nguyễn Văn X',
-                    validTo: '2025-12-31T23:59:59Z'
-                },
-                {
-                    id: '2',
-                    name: 'Chữ ký điện tử Phó Hiệu trưởng',
-                    signerName: 'Trần Thị Y',
-                    validTo: '2025-12-31T23:59:59Z'
-                }
-            ]
 
             setSigningConfigs(mockConfigs)
         } catch (error) {
@@ -145,13 +131,6 @@ export default function EvidenceWorkflowPage() {
         try {
             await new Promise(resolve => setTimeout(resolve, 300))
 
-            const mockUsers = [
-                { id: 'user1', fullName: 'Phạm Văn C', position: 'Phó Trưởng khoa' },
-                { id: 'user2', fullName: 'Hoàng Văn E', position: 'Trưởng bộ môn' },
-                { id: 'user3', fullName: 'Nguyễn Thị F', position: 'Trưởng khoa' },
-                { id: 'user4', fullName: 'Trần Văn H', position: 'Hiệu trưởng' },
-                { id: 'user5', fullName: 'Lê Văn J', position: 'Trưởng bộ môn' }
-            ]
 
             setUsers(mockUsers)
         } catch (error) {
