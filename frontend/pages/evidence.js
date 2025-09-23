@@ -57,17 +57,17 @@ export default function EvidencePage() {
 
             const mockStatistics = {
                 overview: {
-                    totalEvidences: 1247,
-                    pendingApproval: 89,
-                    approvedEvidences: 892,
-                    rejectedEvidences: 32,
-                    draftEvidences: 234
+                    totalEvidences: 0,
+                    pendingApproval: 0,
+                    approvedEvidences: 0,
+                    rejectedEvidences: 0,
+                    draftEvidences: 0
                 },
                 byStatus: {
-                    approved: 892,
-                    pending: 89,
-                    rejected: 32,
-                    draft: 234
+                    approved: 0,
+                    pending: 0,
+                    rejected: 0,
+                    draft: 0
                 },
                 byProgram: [
                     { name: '', count: 0, percentage: 0 },
@@ -85,48 +85,6 @@ export default function EvidencePage() {
                 ]
             }
 
-            const mockRecentEvidences = [
-                {
-                    id: '1',
-                    code: 'H1.01.02.15',
-                    name: 'Báo cáo kết quả học tập sinh viên K65',
-                    status: 'approved',
-                    submittedBy: 'Nguyễn Văn A',
-                    submittedAt: '2024-12-25T10:30:00Z',
-                    program: 'AUN-QA 2023',
-                    criteriaName: 'Chất lượng sinh viên đầu vào'
-                },
-                {
-                    id: '2',
-                    code: 'H1.01.02.16',
-                    name: 'Danh sách sinh viên tốt nghiệp loại xuất sắc',
-                    status: 'pending',
-                    submittedBy: 'Trần Thị B',
-                    submittedAt: '2024-12-25T09:15:00Z',
-                    program: 'AUN-QA 2023',
-                    criteriaName: 'Kết quả học tập của sinh viên'
-                },
-                {
-                    id: '3',
-                    code: 'H1.01.02.17',
-                    name: 'Thống kê tỷ lệ có việc làm sau tốt nghiệp',
-                    status: 'draft',
-                    submittedBy: 'Lê Văn C',
-                    submittedAt: '2024-12-25T08:45:00Z',
-                    program: 'MOET 2024',
-                    criteriaName: 'Sinh viên và hỗ trợ sinh viên'
-                },
-                {
-                    id: '4',
-                    code: 'H1.01.02.18',
-                    name: 'Báo cáo khảo sát sinh viên về chương trình',
-                    status: 'rejected',
-                    submittedBy: 'Phạm Thị D',
-                    submittedAt: '2024-12-24T16:20:00Z',
-                    program: 'AUN-QA 2023',
-                    criteriaName: 'Đánh giá và cải tiến chương trình'
-                }
-            ]
 
             setStatistics(mockStatistics)
             setRecentEvidences(mockRecentEvidences)
