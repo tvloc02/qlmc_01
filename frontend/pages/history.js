@@ -59,18 +59,7 @@ export default function HistoryPage() {
             // Mock API call
             await new Promise(resolve => setTimeout(resolve, 1000))
 
-            const mockHistory = [
-                {
-                    _id: '',
-                    userId: { fullName: '', email: '' },
-                    action: '',
-                    module: '',
-                    description: '',
-                    timestamp: new Date(),
-                    status: '',
-                    ipAddress: ''
-                }
-            ]
+
 
             setHistory(mockHistory)
             setTotalPages(1)
