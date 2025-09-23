@@ -107,46 +107,6 @@ export default function StampingPage() {
             // Mock API call
             await new Promise(resolve => setTimeout(resolve, 800))
 
-            const mockDocuments = [
-                {
-                    id: '1',
-                    name: 'Quyết định bổ nhiệm giảng viên',
-                    code: 'QD001/2024',
-                    type: 'decision',
-                    status: 'pending_stamp',
-                    evidenceCode: 'H2.01.01.08',
-                    createdBy: 'Nguyễn Văn A',
-                    createdAt: '2024-12-25T10:30:00Z',
-                    fileSize: 2048000,
-                    pageCount: 3,
-                    requiresOfficialStamp: true,
-                    stampHistory: []
-                },
-                {
-                    id: '2',
-                    name: 'Báo cáo kết quả học tập sinh viên',
-                    code: 'BC002/2024',
-                    type: 'report',
-                    status: 'stamped',
-                    evidenceCode: 'H1.01.02.15',
-                    createdBy: 'Trần Thị B',
-                    createdAt: '2024-12-24T09:15:00Z',
-                    fileSize: 1536000,
-                    pageCount: 8,
-                    requiresOfficialStamp: true,
-                    stampHistory: [
-                        {
-                            id: '1',
-                            templateName: 'Dấu chính thức VNUA',
-                            stampedBy: 'Phạm Văn C',
-                            stampedAt: '2024-12-24T15:30:00Z',
-                            note: 'Phê duyệt báo cáo'
-                        }
-                    ]
-                }
-            ]
-
-            // Apply filters
             let filteredDocuments = mockDocuments
             if (searchQuery) {
                 filteredDocuments = mockDocuments.filter(doc =>
@@ -170,43 +130,6 @@ export default function StampingPage() {
 
     const fetchStampTemplates = async () => {
         try {
-            // Mock API call
-            const mockTemplates = [
-                {
-                    id: '1',
-                    name: 'Dấu chính thức VNUA',
-                    type: 'official',
-                    design: {
-                        shape: 'circle',
-                        size: 100,
-                        color: '#FF0000',
-                        borderWidth: 2,
-                        text: {
-                            main: 'ĐẠI HỌC NÔNG NGHIỆP HÀ NỘI',
-                            sub: 'PHÒNG ĐÀO TẠO',
-                            bottom: 'VIETNAM NATIONAL UNIVERSITY OF AGRICULTURE'
-                        }
-                    },
-                    isActive: true
-                },
-                {
-                    id: '2',
-                    name: 'Dấu xác nhận',
-                    type: 'verification',
-                    design: {
-                        shape: 'rectangle',
-                        size: 80,
-                        color: '#0066CC',
-                        borderWidth: 1,
-                        text: {
-                            main: 'ĐÃ XÁC NHẬN',
-                            sub: '',
-                            bottom: formatDate(new Date())
-                        }
-                    },
-                    isActive: true
-                }
-            ]
 
             setStampTemplates(mockTemplates)
         } catch (error) {
