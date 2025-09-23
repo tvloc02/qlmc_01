@@ -1,4 +1,4 @@
-// File: backend/debug-login.js
+
 const mongoose = require('mongoose');
 require('dotenv').config();
 
