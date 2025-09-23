@@ -70,17 +70,9 @@ export default function EvidencePage() {
                     draft: 0
                 },
                 byProgram: [
-                    { name: '', count: 0, percentage: 0 },
-                    { name: '', count: 0, percentage: 0 },
-                    { name: '', count: 0, percentage: 0 },
                     { name: '', count: 0, percentage: 0 }
                 ],
                 monthlyTrend: [
-                    { month: '', evidences: 0, approved: 0 },
-                    { month: '', evidences: 0, approved: 0 },
-                    { month: '', evidences: 0, approved: 0 },
-                    { month: '', evidences: 0, approved: 0 },
-                    { month: '', evidences: 0, approved: 0 },
                     { month: '', evidences: 0, approved: 0 }
                 ]
             }
