@@ -162,17 +162,6 @@ export default function PublishingPage() {
 
     const fetchAvailableEvidences = async () => {
         try {
-            // Mock API call
-            const mockEvidences = [
-                {
-                    id: '',
-                    code: '',
-                    name: '',
-                    standardName: '',
-                    fileCount: 0
-                }
-            ]
-
             setAvailableEvidences(mockEvidences)
         } catch (error) {
             console.error('Lỗi tải danh sách minh chứng:', error)
