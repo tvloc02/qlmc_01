@@ -138,7 +138,6 @@ export default function EvidenceWorkflowPage() {
         }
     }
 
-    // Khởi tạo trình ký
     const handleInitiateSigning = (evidence) => {
         setSelectedEvidence(evidence)
         setInitiateForm({
