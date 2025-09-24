@@ -6,7 +6,7 @@ import {
     Lock,
     Eye,
     EyeOff,
-    ArrowLeft,
+    ArrowRight,
     Moon,
     Sun,
     ArrowUpDown,

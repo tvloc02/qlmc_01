@@ -245,13 +245,6 @@ if (missingFunctions.length > 0) {
     console.log('✅ All required authController functions are available');
 }
 
-// Thêm vào cuối file auth.js (routes)
-
-/**
- * @route   GET /api/auth/debug-users
- * @desc    Debug: Show all users (REMOVE IN PRODUCTION)
- * @access  Public
- */
 router.get('/debug-users', async (req, res) => {
     try {
         const User = require('../models/User');

@@ -16,7 +16,7 @@ async function generateHash() {
         console.log('✅ Verify test:', isValid);
 
         // Test với hash cũ
-        const oldHash = '$2b$12$N9qo8uLOickgx2ZMRZoMye/Lo/TXpkmX3f7eKEzUQVl.n9JWCwNUq';
+        const oldHash = '$2a$12$egexsu5UKDC.q4lFaxSxtupYXf02POwuRMns0GAC6VyUyjvSVeyDq';
         const isOldValid = await bcrypt.compare(password, oldHash);
         console.log('🔍 Old hash valid:', isOldValid);
 
